@@ -25,34 +25,38 @@
         .container{
             max-width:500px;
             margin:0 auto;
-            padding:20px;
+            padding:15px;
             position:relative;
-            z-index:1
+            z-index:1;
+            height:100vh;
+            display:flex;
+            flex-direction:column;
+            justify-content:space-between;
         }
         .header{
             text-align:center;
-            padding:20px 0 15px
+            padding:10px 0 5px
         }
         .profile-container{
             display:flex;
             flex-direction:column;
             align-items:center;
-            margin-bottom:15px
+            margin-bottom:5px
         }
         .profile-image{
-            width:120px;
-            height:120px;
+            width:110px;
+            height:110px;
             border-radius:50%;
             object-fit:cover;
             border:2px solid rgba(255,255,255,0.8);
-            margin-bottom:15px;
+            margin-bottom:10px;
             box-shadow:0 4px 12px rgba(0,0,0,0.3);
             filter:brightness(1.1) contrast(1.05)
         }
         .profile-name{
-            font-size:1.7rem;
+            font-size:1.6rem;
             font-weight:bold;
-            margin-bottom:12px;
+            margin-bottom:8px;
             text-shadow:2px 2px 4px rgba(0,0,0,0.5)
         }
         .btn{
@@ -62,12 +66,12 @@
             text-decoration:none;
             font-weight:bold;
             border-radius:25px;
-            padding:14px;
-            margin:8px 0;
+            padding:12px;
+            margin:5px 0;
             text-align:center;
             width:100%;
             border:2px solid #fff;
-            font-size:1.1rem;
+            font-size:1rem;
             transition:all 0.3s ease;
             box-shadow:0 4px 12px rgba(0,0,0,0.3)
         }
@@ -79,12 +83,13 @@
             display:none
         }
         .features{
-            padding:12px 0
+            padding:5px 0;
+            margin-top: -15px;
         }
         .section-title{
             text-align:center;
             font-size:1.3rem;
-            margin-bottom:8px;
+            margin-bottom:5px;
             text-shadow:1px 1px 3px rgba(0,0,0,0.5)
         }
         .feature-list{
@@ -93,9 +98,9 @@
             margin:0 auto
         }
         .feature-item{
-            padding:8px 0;
+            padding:4px 0;
             color:#fff;
-            font-size:1rem;
+            font-size:0.95rem;
             text-align:center;
             text-shadow:1px 1px 2px rgba(0,0,0,0.5)
         }
@@ -103,35 +108,31 @@
             content:"✓";
             color:#4caf50;
             font-weight:bold;
-            margin-right:8px;
-            font-size:1.1rem
+            margin-right:6px;
+            font-size:1rem
         }
         .cta-section{
             text-align:center;
-            padding:15px 0;
-            margin:12px 0
+            padding:8px 0;
+            margin:5px 0;
+            margin-top: -10px;
         }
         .cta-title{
             font-size:1.3rem;
-            margin-bottom:8px;
+            margin-bottom:5px;
             text-shadow:1px 1px 3px rgba(0,0,0,0.5)
         }
         .cta-text{
             color:#fff;
-            margin-bottom:10px;
-            font-size:1rem;
+            margin-bottom:8px;
+            font-size:0.95rem;
             text-shadow:1px 1px 2px rgba(0,0,0,0.5)
         }
         .advertiser{
             color:#fff;
-            font-size:0.9rem;
-            margin-top:8px;
+            font-size:0.85rem;
+            margin-top:5px;
             text-shadow:1px 1px 2px rgba(0,0,0,0.5)
-        }
-        .advertiser a{
-            color:#ffeb3b;
-            text-decoration:none;
-            font-weight:bold
         }
         .mobile-buttons{
             position:fixed;
@@ -140,7 +141,7 @@
             width:100%;
             background:rgba(255,255,255,0.15);
             backdrop-filter:blur(10px);
-            padding:12px;
+            padding:10px;
             display:none;
             z-index:1000;
             box-shadow:0 -2px 10px rgba(0,0,0,0.3);
@@ -149,76 +150,85 @@
         .urgency-text{
             background:rgba(255,0,0,0.2);
             border:1px solid rgba(255,0,0,0.4);
-            border-radius:10px;
-            padding:8px;
-            margin:10px 0;
+            border-radius:8px;
+            padding:6px;
+            margin:8px 0;
             font-weight:bold;
             text-align:center;
-            font-size:0.9rem
+            font-size:0.85rem
         }
         .main-content{
             display:flex;
             flex-direction:column;
-            gap:12px;
-            padding-bottom:70px
+            flex:1;
+            justify-content:space-between;
+            gap:2px;
         }
         .footer-advertiser{
             text-align:center;
-            margin-top:15px;
-            padding:10px;
+            margin-top:8px;
+            padding:8px;
             background:rgba(255,255,255,0.1);
-            border-radius:10px;
-            border:1px solid rgba(255,255,255,0.2)
+            border-radius:8px;
+            border:1px solid rgba(255,255,255,0.2);
+            font-size:0.85rem;
         }
         
         @media (max-width:768px){
             .desktop-btn{display:none}
-            .mobile-header-btn{display:block;margin-top:8px}
+            .mobile-header-btn{display:block;margin-top:5px}
             .mobile-buttons{display:block}
-            .container{padding-bottom:70px}
-            .main-content{gap:10px}
+            .container{
+                padding-bottom:60px;
+                height:calc(100vh - 60px);
+            }
+            .main-content{gap:1px}
         }
         @media (min-width:769px){
             .mobile-buttons{display:none}
             .desktop-btn{display:block}
         }
         @media (max-height:700px){
-            .profile-image{width:100px;height:100px}
-            .profile-name{font-size:1.5rem}
-            .main-content{gap:8px}
+            .profile-image{width:90px;height:90px}
+            .profile-name{font-size:1.4rem}
+            .main-content{gap:0px}
+            .features{margin-top: -20px;}
+            .cta-section{margin-top: -15px;}
         }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="main-content">
-            <header class="header">
-                <div class="profile-container">
-                    <img src="https://d1yei2z3i6k35z.cloudfront.net/13184094/68f96d9023494_6aae1a53-e3a4-4592-a35c-acebd4990f71.jpeg" alt="Malik Dubai" class="profile-image">
-                    <h1 class="profile-name">Malik Dubai</h1>
-                    <a href="https://t.me/+5IgYyffBsdU0NDE1" class="btn desktop-btn">Join Free Telegram</a>
-                    <a href="https://t.me/+5IgYyffBsdU0NDE1" class="btn mobile-header-btn">Join Free Telegram</a>
-                </div>
-            </header>
-            
-            <section class="features">
-                <h2 class="section-title">Premium Cricket Predictions</h2>
-                <ul class="feature-list">
-                    <li class="feature-item">Expert Match Analysis</li>
-                    <li class="feature-item">Accurate Toss Predictions</li>
-                    <li class="feature-item">Winner Insights</li>
-                    <li class="feature-item">Free Daily Tips</li>
-                </ul>
-            </section>
-            
-            <section class="cta-section">
-                <h2 class="cta-title">Join Now</h2>
-                <div class="urgency-text">यह लिंक फिर उपलब्ध नहीं होगा</div>
-                <div class="advertiser">
-                    ⇓ Click the Button Below & Join Now ⇓
-                </div>
-                <a href="https://t.me/+5IgYyffBsdU0NDE1" class="btn desktop-btn">Join Telegram Channel</a>
-            </section>
+            <div class="top-section">
+                <header class="header">
+                    <div class="profile-container">
+                        <img src="https://d1yei2z3i6k35z.cloudfront.net/13184094/68f96d9023494_6aae1a53-e3a4-4592-a35c-acebd4990f71.jpeg" alt="Malik Dubai" class="profile-image">
+                        <h1 class="profile-name">Malik Dubai</h1>
+                        <a href="https://t.me/+5IgYyffBsdU0NDE1" class="btn desktop-btn">Join Free Telegram</a>
+                        <a href="https://t.me/+5IgYyffBsdU0NDE1" class="btn mobile-header-btn">Join Free Telegram</a>
+                    </div>
+                </header>
+                
+                <section class="features">
+                    <h2 class="section-title">Premium Cricket Predictions</h2>
+                    <ul class="feature-list">
+                        <li class="feature-item">Expert Match Analysis</li>
+                        <li class="feature-item">Accurate Toss Predictions</li>
+                        <li class="feature-item">Winner Insights</li>
+                        <li class="feature-item">Free Daily Tips</li>
+                    </ul>
+                </section>
+                
+                <section class="cta-section">
+                    <h2 class="cta-title">Join Now</h2>
+                    <div class="urgency-text">यह लिंक फिर उपलब्ध नहीं होगा</div>
+                    <div class="advertiser">
+                        ⇓ Click the Button Below & Join Now ⇓
+                    </div>
+                    <a href="https://t.me/+5IgYyffBsdU0NDE1" class="btn desktop-btn">Join Telegram Channel</a>
+                </section>
+            </div>
             
             <div class="footer-advertiser">
                 Advertiser: <a href="https://t.me/quicklygrow">@quicklygrow</a>
