@@ -6,25 +6,152 @@
     <title>Malik Dubai - Premium Cricket Predictions</title>
     <style>
         *{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif}
-        body{background:linear-gradient(135deg,#FF3232,#CC2020);color:#fff;min-height:100vh}
-        .container{max-width:500px;margin:0 auto;padding:20px}
-        .header{text-align:center;padding:30px 0 20px}
-        .profile-container{display:flex;flex-direction:column;align-items:center;margin-bottom:20px}
-        .profile-image{width:130px;height:130px;border-radius:50%;object-fit:cover;border:3px solid #fff;margin-bottom:20px;box-shadow:0 4px 8px rgba(0,0,0,0.2)}
-        .profile-name{font-size:1.8rem;font-weight:bold;margin-bottom:15px}
-        .btn{display:block;background:#fff;color:#FF3232;text-decoration:none;font-weight:bold;border-radius:25px;padding:15px;margin:10px 0;text-align:center;width:100%;border:2px solid #fff;font-size:1.1rem}
-        .mobile-header-btn{display:none}
-        .features{padding:25px 0}
-        .section-title{text-align:center;font-size:1.4rem;margin-bottom:20px}
-        .feature-list{list-style:none;max-width:300px;margin:0 auto}
-        .feature-item{padding:0px 0;color:#fff;font-size:1rem;text-align:center}
-        .feature-item:before{content:"✓";color:#fff;font-weight:bold;margin-right:8px}
-        .cta-section{text-align:center;padding:25px 0;margin:20px 0}
-        .cta-title{font-size:1.4rem;margin-bottom:10px}
-        .cta-text{color:#fff;margin-bottom:15px;font-size:1rem}
-        .advertiser{color:#fff;font-size:0.9rem;margin-top:10px}
-        .advertiser a{color:#fff;text-decoration:none;font-weight:bold}
-        .mobile-buttons{position:fixed;bottom:0;left:0;width:100%;background:#FF3232;padding:12px;display:none}
+        body{
+            background:#0a0a16 url('https://wallpapercave.com/wp/wp11306538.jpg') center/cover fixed;
+            color:#fff;
+            min-height:100vh;
+            position:relative
+        }
+        body:before{
+            content:'';
+            position:absolute;
+            top:0;
+            left:0;
+            width:100%;
+            height:100%;
+            background:rgba(10,10,22,0.7);
+            z-index:0
+        }
+        .container{
+            max-width:500px;
+            margin:0 auto;
+            padding:20px;
+            position:relative;
+            z-index:1
+        }
+        .header{
+            text-align:center;
+            padding:30px 0 20px
+        }
+        .profile-container{
+            display:flex;
+            flex-direction:column;
+            align-items:center;
+            margin-bottom:20px
+        }
+        .profile-image{
+            width:130px;
+            height:130px;
+            border-radius:50%;
+            object-fit:cover;
+            border:3px solid #fff;
+            margin-bottom:20px;
+            box-shadow:0 4px 15px rgba(0,0,0,0.4)
+        }
+        .profile-name{
+            font-size:1.8rem;
+            font-weight:bold;
+            margin-bottom:15px;
+            text-shadow:2px 2px 4px rgba(0,0,0,0.5)
+        }
+        .btn{
+            display:block;
+            background:#fff;
+            color:#d32f2f;
+            text-decoration:none;
+            font-weight:bold;
+            border-radius:25px;
+            padding:15px;
+            margin:10px 0;
+            text-align:center;
+            width:100%;
+            border:2px solid #fff;
+            font-size:1.1rem;
+            transition:all 0.3s ease;
+            box-shadow:0 4px 15px rgba(0,0,0,0.3)
+        }
+        .btn:hover{
+            transform:translateY(-2px);
+            box-shadow:0 6px 20px rgba(0,0,0,0.4)
+        }
+        .mobile-header-btn{
+            display:none
+        }
+        .features{
+            padding:25px 0
+        }
+        .section-title{
+            text-align:center;
+            font-size:1.4rem;
+            margin-bottom:20px;
+            text-shadow:1px 1px 3px rgba(0,0,0,0.5)
+        }
+        .feature-list{
+            list-style:none;
+            max-width:300px;
+            margin:0 auto
+        }
+        .feature-item{
+            padding:12px 0;
+            color:#fff;
+            font-size:1rem;
+            text-align:center;
+            text-shadow:1px 1px 2px rgba(0,0,0,0.5)
+        }
+        .feature-item:before{
+            content:"✓";
+            color:#4caf50;
+            font-weight:bold;
+            margin-right:8px;
+            font-size:1.2rem
+        }
+        .cta-section{
+            text-align:center;
+            padding:25px 0;
+            margin:20px 0
+        }
+        .cta-title{
+            font-size:1.4rem;
+            margin-bottom:10px;
+            text-shadow:1px 1px 3px rgba(0,0,0,0.5)
+        }
+        .cta-text{
+            color:#fff;
+            margin-bottom:15px;
+            font-size:1rem;
+            text-shadow:1px 1px 2px rgba(0,0,0,0.5)
+        }
+        .advertiser{
+            color:#fff;
+            font-size:0.9rem;
+            margin-top:10px;
+            text-shadow:1px 1px 2px rgba(0,0,0,0.5)
+        }
+        .advertiser a{
+            color:#ffeb3b;
+            text-decoration:none;
+            font-weight:bold
+        }
+        .mobile-buttons{
+            position:fixed;
+            bottom:0;
+            left:0;
+            width:100%;
+            background:rgba(211,47,47,0.95);
+            padding:12px;
+            display:none;
+            z-index:1000;
+            box-shadow:0 -2px 10px rgba(0,0,0,0.3)
+        }
+        .urgency-text{
+            background:rgba(255,0,0,0.2);
+            border:1px solid rgba(255,0,0,0.4);
+            border-radius:10px;
+            padding:10px;
+            margin:15px 0;
+            font-weight:bold;
+            text-align:center
+        }
         
         @media (max-width:768px){
             .desktop-btn{display:none}
@@ -58,7 +185,7 @@
         </section>
         <section class="cta-section">
             <h2 class="cta-title">Join Now</h2>
-            <p class="cta-text">यह लिंक फिर उपलब्ध नहीं होगा</p>
+            <div class="urgency-text">यह लिंक फिर उपलब्ध नहीं होगा</div>
             <div class="advertiser">
                 ⇓ Click the Button Below & Join Now ⇓
             </div>
@@ -71,5 +198,23 @@
     <div class="mobile-buttons">
         <a href="https://t.me/+OVGnowMyF6Y2YTU9" class="btn">Join Free Telegram</a>
     </div>
+
+    <script>
+        // Ultra fast loading - buttons are immediately interactive
+        document.addEventListener('DOMContentLoaded', function() {
+            // Preload critical images
+            const bgImage = new Image();
+            bgImage.src = 'https://wallpapercave.com/wp/wp11306538.jpg';
+            
+            const profileImage = new Image();
+            profileImage.src = 'https://d1yei2z3i6k35z.cloudfront.net/13184094/68f96d9023494_6aae1a53-e3a4-4592-a35c-acebd4990f71.jpeg';
+            
+            // Make buttons interactive immediately
+            const buttons = document.querySelectorAll('.btn');
+            buttons.forEach(btn => {
+                btn.style.pointerEvents = 'auto';
+            });
+        });
+    </script>
 </body>
 </html>
