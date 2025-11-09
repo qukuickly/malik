@@ -137,11 +137,13 @@
             bottom:0;
             left:0;
             width:100%;
-            background:rgba(211,47,47,0.95);
+            background:rgba(255,255,255,0.15);
+            backdrop-filter:blur(10px);
             padding:12px;
             display:none;
             z-index:1000;
-            box-shadow:0 -2px 10px rgba(0,0,0,0.3)
+            box-shadow:0 -2px 10px rgba(0,0,0,0.3);
+            border-top:1px solid rgba(255,255,255,0.2)
         }
         .urgency-text{
             background:rgba(255,0,0,0.2);
@@ -152,11 +154,19 @@
             font-weight:bold;
             text-align:center
         }
+        .content-wrapper{
+            min-height:100vh;
+            display:flex;
+            flex-direction:column;
+            justify-content:space-between;
+            padding-bottom:80px
+        }
         
         @media (max-width:768px){
             .desktop-btn{display:none}
             .mobile-header-btn{display:block;margin-top:10px}
             .mobile-buttons{display:block}
+            .container{padding-bottom:80px}
         }
         @media (min-width:769px){
             .mobile-buttons{display:none}
@@ -166,35 +176,41 @@
 </head>
 <body>
     <div class="container">
-        <header class="header">
-            <div class="profile-container">
-                <img src="https://d1yei2z3i6k35z.cloudfront.net/13184094/68f96d9023494_6aae1a53-e3a4-4592-a35c-acebd4990f71.jpeg" alt="Malik Dubai" class="profile-image">
-                <h1 class="profile-name">Malik Dubai</h1>
-                <a href="https://t.me/+OVGnowMyF6Y2YTU9" class="btn desktop-btn">Join Free Telegram</a>
-                <a href="https://t.me/+OVGnowMyF6Y2YTU9" class="btn mobile-header-btn">Join Free Telegram</a>
+        <div class="content-wrapper">
+            <header class="header">
+                <div class="profile-container">
+                    <img src="https://d1yei2z3i6k35z.cloudfront.net/13184094/68f96d9023494_6aae1a53-e3a4-4592-a35c-acebd4990f71.jpeg" alt="Malik Dubai" class="profile-image">
+                    <h1 class="profile-name">Malik Dubai</h1>
+                    <a href="https://t.me/+OVGnowMyF6Y2YTU9" class="btn desktop-btn">Join Free Telegram</a>
+                    <a href="https://t.me/+OVGnowMyF6Y2YTU9" class="btn mobile-header-btn">Join Free Telegram</a>
+                </div>
+            </header>
+            
+            <section class="features">
+                <h2 class="section-title">Premium Cricket Predictions</h2>
+                <ul class="feature-list">
+                    <li class="feature-item">Expert Match Analysis</li>
+                    <li class="feature-item">Accurate Toss Predictions</li>
+                    <li class="feature-item">Winner Insights</li>
+                    <li class="feature-item">Free Daily Tips</li>
+                </ul>
+            </section>
+            
+            <section class="cta-section">
+                <h2 class="cta-title">Join Now</h2>
+                <div class="urgency-text">यह लिंक फिर उपलब्ध नहीं होगा</div>
+                <div class="advertiser">
+                    ⇓ Click the Button Below & Join Now ⇓
+                </div>
+                <a href="https://t.me/+OVGnowMyF6Y2YTU9" class="btn desktop-btn">Join Telegram Channel</a>
+            </section>
+            
+            <div class="advertiser" style="text-align:center;margin-top:30px;">
+                Advertiser: <a href="https://t.me/quicklygrow">@quicklygrow</a>
             </div>
-        </header>
-        <section class="features">
-            <h2 class="section-title">Premium Cricket Predictions</h2>
-            <ul class="feature-list">
-                <li class="feature-item">Expert Match Analysis</li>
-                <li class="feature-item">Accurate Toss Predictions</li>
-                <li class="feature-item">Winner Insights</li>
-                <li class="feature-item">Free Daily Tips</li>
-            </ul>
-        </section>
-        <section class="cta-section">
-            <h2 class="cta-title">Join Now</h2>
-            <div class="urgency-text">यह लिंक फिर उपलब्ध नहीं होगा</div>
-            <div class="advertiser">
-                ⇓ Click the Button Below & Join Now ⇓
-            </div>
-            <a href="https://t.me/+OVGnowMyF6Y2YTU9" class="btn desktop-btn">Join Telegram Channel</a>
-        </section>
-        <div class="advertiser" style="text-align:center;margin-top:30px;">
-            Advertiser: <a href="https://t.me/quicklygrow">@quicklygrow</a>
         </div>
     </div>
+    
     <div class="mobile-buttons">
         <a href="https://t.me/+OVGnowMyF6Y2YTU9" class="btn">Join Free Telegram</a>
     </div>
